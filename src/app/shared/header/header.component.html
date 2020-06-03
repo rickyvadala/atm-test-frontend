@@ -1,0 +1,21 @@
+<!-- Nav Start -->
+<nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top" [class.darkHeader]="darkHeader">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="'/demo/one'"><img src="assets/images/logo-hi-2.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isOpenMobile=!isOpenMobile">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent" [class.show]="isOpenMobile">
+      <ul class="navbar-nav ml-auto" id="mymenu">
+        <li class="nav-item">
+          <a class="nav-link" #home href="#home" (click)="active('home')" [ngClass]="{'active show': activeClass == 'home' }" [pageScrollOffset]="80" pageScroll>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#atm" data-menuanchor="atm" (click)="active('atm')" [ngClass]="{'active show': activeClass == 'atm' }" [pageScrollOffset]="80" pageScroll>Atm</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Nav end-->
